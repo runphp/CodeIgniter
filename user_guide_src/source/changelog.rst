@@ -7,6 +7,11 @@ Version 3.0.5
 
 Release Date: Not Released
 
+-  :doc:`Query Builder <database/query_builder>`
+
+   -  Added a ``$batch_size`` parameter to the ``insert_batch()`` method (defaults to 100).
+   -  Added a ``$batch_size`` parameter to the ``update_batch()`` method (defaults to 100).
+
 Bug fixes for 3.0.5
 -------------------
 
@@ -18,6 +23,8 @@ Bug fixes for 3.0.5
 -  Fixed a regression in :doc:`Form Helper <helpers/form_helper>` functions :php:func:`set_checkbox()`, :php:func:`set_radio()` where "checked" inputs aren't recognized after a form submit.
 -  Fixed a bug (#4407) - :doc:`Text Helper <helpers/text_helper>` function :php:func:`word_censor()` doesn't work under PHP 7 if there's no custom replacement provided.
 -  Fixed a bug (#4415) - :doc:`Form Validation Library <libraries/form_validation>` rule **valid_url** didn't accept URLs with IPv6 addresses enclosed in square brackets under PHP 5 (upstream bug).
+-  Fixed a bug (#4427) - :doc:`CAPTCHA Helper <helpers/capcha_helper>` triggers an error if the provided character pool is too small.
+-  Fixed a bug (#4430) - :doc:`File Uploading Library <libraries/file_uploading>` option **file_ext_tolower** didn't work.
 
 Version 3.0.4
 =============
